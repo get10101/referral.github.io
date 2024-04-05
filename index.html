@@ -199,7 +199,8 @@
                       id="queryParamValue"
                       class="badge bg-primary text-light"
                     ></span>
-                    to get a fee discount on trading fees for the first month.
+                    to get a fee discount on trading fees for the first
+                    month.<sup>*</sup>
                   </h3>
                 </div>
               </div>
@@ -220,6 +221,14 @@
                   <a href="https://github.com/get10101/10101/releases/latest"
                     ><img src="./img/icon/get-apk.svg" alt="APK link"
                   /></a>
+                </div>
+                <br />
+                <br />
+                <br />
+                <div class="col-12 mt-2" id="referral-note">
+                  <p class="small font-italic">
+                    (<sup>*</sup> only valid for new users.)
+                  </p>
                 </div>
               </div>
             </div>
@@ -315,6 +324,8 @@
         const queryParamElement = document.getElementById("queryParamValue");
         queryParamElement.textContent = truncatedQueryParamValue;
       } else {
+        const referralNote = document.getElementById("referral-note");
+        referralNote.innerText = "";
         const queryParamElement = document.getElementById("referral-text");
         queryParamElement.innerHTML = `<div class="alert alert-danger d-flex align-items-center" role="alert">
             <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger: "><use xlink:href="#exclamation-triangle-fill"/></svg>
